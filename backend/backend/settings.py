@@ -25,7 +25,7 @@ SECRET_KEY = 'pzxvz!-y-)rknk403a-e#jgz^m9qe$xf49n&8vldg&e8)hw7q6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [['todo-app.herokuapp.com', '127.0.0.1:8000']]
 
 
 # Application definition
@@ -122,7 +122,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
 
 STATIC_URL = '/static/'
-STATIC_ROOT = 'C:/Users/pavani singam shetty/todo-app/backend/static'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 CORS_ORIGIN_WHITELIST = [
     'http://localhost:3000'
