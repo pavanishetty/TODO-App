@@ -25,7 +25,7 @@ SECRET_KEY = 'pzxvz!-y-)rknk403a-e#jgz^m9qe$xf49n&8vldg&e8)hw7q6'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [['todo-app.herokuapp.com', '127.0.0.1:8000']]
+ALLOWED_HOSTS = [['todo-react-django-app.herokuapp.com', '127.0.0.1:8000']]
 
 
 # Application definition
@@ -120,6 +120,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.2/howto/static-files/
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
